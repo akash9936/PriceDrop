@@ -35,7 +35,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 var websites = [
-    { name: 'DesiDime', url: 'https://www.desidime.com/' },
+    { name: 'DesiDimes', url: 'https://www.desidime.com/' },
     { name: 'pricehistoryapp', url: 'https://pricehistoryapp.com/' },
     { name: 'freekaamaal', url: 'https://freekaamaal.com/' }
 ];

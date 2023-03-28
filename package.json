@@ -4,12 +4,22 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc main.ts"
+    "start": "npm run build && npm run serve",
+    "serve": "node dist/bin/www.js",
+    "build": "npm run build-ts && npm run copy-static-assets",
+    "test": "mocha",
+    "build-ts": "tsc",
+    "copy-static-assets": "node copyStaticAssets.js",
+    "format": "prettier --write \"./**/*.{ts,js,json}\" && npm run lint:fix",
+    "lint": "eslint --ignore-path .gitignore --ext .ts src/",
+    "lint:fix": "npm run lint -- --fix"
   },
   "author": "Akash Singh",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.5"
   }
 }
