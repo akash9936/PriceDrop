@@ -1,8 +1,8 @@
 
 const websites: { name: string, url: string }[] = [
-    { name: 'Google', url: 'https://www.google.com' },
-    { name: 'YouTube', url: 'https://www.youtube.com' },
-    { name: 'GitHub', url: 'https://www.github.com' }
+    { name: 'DesiDime', url: 'https://www.desidime.com/' },
+    { name: 'pricehistoryapp', url: 'https://pricehistoryapp.com/' },
+    { name: 'freekaamaal', url: 'https://freekaamaal.com/' }
   ];
   
   const clickWebsiteButton = document.createElement('ul');
@@ -27,7 +27,7 @@ const websites: { name: string, url: string }[] = [
     div.appendChild(clickWebsiteButton);
   }
   
-  function handleClick(event: MouseEvent) {
+  async function handleClick(event: MouseEvent) {
     const button = event.target as HTMLButtonElement;
     const item = button.parentNode as HTMLLIElement;
     const link = item.querySelector('a');
@@ -43,8 +43,3 @@ const websites: { name: string, url: string }[] = [
   });
 
 
-
-  const div1 = document.getElementById('FoolButton');
-  if (div1) {
-    window.open("facebook.com", 'Open Website');
-  }
